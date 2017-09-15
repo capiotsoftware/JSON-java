@@ -173,7 +173,9 @@ public class JSONObject {
         // implementations to rearrange their items for a faster element 
         // retrieval based on associative access.
         // Therefore, an implementation mustn't rely on the order of the item.
-        this.map = new HashMap<String, Object>();
+     
+        //Changed from HashMap to LinkedHashMap. Now json items will be in order.
+        this.map = new LinkedHashMap<String, Object>();
     }
 
     /**
